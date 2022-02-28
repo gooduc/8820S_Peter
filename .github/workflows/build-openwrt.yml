@@ -18,7 +18,9 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-
+  schedule:
+    - cron: 0 18 * * 4  # 每天国际时间21点，北京时间凌晨5点执行(北京+8)，北京时间周五凌晨5点执行
+    
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
