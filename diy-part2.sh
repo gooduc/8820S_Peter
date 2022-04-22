@@ -23,3 +23,9 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' ./package/lean/default-settings/files/z
 #设置FAT为utf8编码
 find target/linux -path "target/linux/*/config-*" | xargs -i sed -i '$a CONFIG_ACPI=y\nCONFIG_X86_ACPI_CPUFREQ=y\n \
 CONFIG_NR_CPUS=128\nCONFIG_FAT_DEFAULT_IOCHARSET="utf8"' {}
+
+
+# 添加额外软件包 add passwall
+# add kengzo 源
+git clone https://github.com/kenzok8/openwrt-packages package/new/kengzo
+git clone https://github.com/kenzok8/small package/new/small
